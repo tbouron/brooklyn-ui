@@ -68,15 +68,15 @@ node(label: 'ubuntu') {
     }
 
     // Conditional stage, when not building a PR
-    if (env.CHANGE_ID == null) {
-        stage('Send notifications') {
-            // Send email notifications
-            step([
-                $class: 'Mailer',
-                notifyEveryUnstableBuild: true,
-                recipients: 'dev@brooklyn.apache.org',
-                sendToIndividuals: false
-            ])
-        }
-    }
+//     if (env.CHANGE_ID == null) {
+//         stage('Send notifications') {
+//             // Send email notifications
+//             step([
+//                 $class: 'Mailer',
+//                 notifyEveryUnstableBuild: true,
+//                 recipients: 'dev@brooklyn.apache.org',
+//                 sendToIndividuals: false
+//             ])
+//         }
+//     }
 }
